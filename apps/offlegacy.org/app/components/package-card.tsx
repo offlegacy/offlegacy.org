@@ -1,6 +1,4 @@
-import { type PropsWithChildren } from 'react'
-
-const PackageCard = ({ children }: PropsWithChildren) => {
+const PackageCard = ({ children }: React.PropsWithChildren) => {
   return (
     <div className="border border-gray-700 hover:border-gray-500 p-4 flex flex-col rounded-lg transition-colors">
       {children}
@@ -8,11 +6,11 @@ const PackageCard = ({ children }: PropsWithChildren) => {
   )
 }
 
-const PackageCardTitle = ({ children }: PropsWithChildren) => {
+const PackageCardTitle = ({ children }: React.PropsWithChildren) => {
   return <h3 className="font-semibold text-xl mb-2">{children}</h3>
 }
 
-const PackageCardDescription = ({ children }: PropsWithChildren) => {
+const PackageCardDescription = ({ children }: React.PropsWithChildren) => {
   return <p className="text-gray-400">{children}</p>
 }
 
