@@ -6,7 +6,7 @@ const AboutTeamCard = () => {
     <section className="mx-auto flex flex-col items-center space-y-1.5">
       <Image src="/offlegacy.svg" alt="offlegacy logo" width={256} height={256} priority />
       <h1 className="text-3xl font-bold">OffLegacy</h1>
-      <h2 className="text-xl font-semibold">Open-source Development Team in South Korea 🇰🇷</h2>
+      <h2 className="text-xl font-semibold">We are working to build a sustainable technological ecosystem</h2>
       <div className="py-4">
         <Link
           href="https://github.com/offlegacy"
