@@ -3,9 +3,7 @@ interface Props {
 }
 
 const PageLayout = ({ children }: Props) => {
-  return (
-    <main className="flex flex-col max-w-screen-xl p-4 m-auto space-y-10 min-h-screen justify-center">{children}</main>
-  )
+  return <main className="flex flex-col max-w-screen-md p-4 m-auto space-y-20 py-10">{children}</main>
 }
 
 export default PageLayout
