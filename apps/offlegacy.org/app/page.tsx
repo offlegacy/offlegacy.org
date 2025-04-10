@@ -43,7 +43,7 @@ export default function Home() {
         <h2 className="font-semibold text-3xl">Open Source Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <ProjectCard
-            href="https://github.com/offlegacy/event-tracker"
+            href="https://event-tracker.offlegacy.org"
             title="Event Tracker"
             description="Comprehensive solution for event tracking in React applications."
             renderStatus={<Tag variant="blue">NEW</Tag>}
