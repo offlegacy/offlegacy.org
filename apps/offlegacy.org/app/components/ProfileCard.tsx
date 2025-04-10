@@ -7,10 +7,10 @@ interface ProfileProps {
   github: string
 }
 
-export default function Profile({ firstName, lastName, github }: ProfileProps) {
+export default function ProfileCard({ firstName, lastName, github }: ProfileProps) {
   return (
     <Link
-      className="flex flex-col items-center gap-2 text-sm"
+      className="flex flex-col items-center gap-2 text-xs"
       href={`https://github.com/${github}`}
       target="_blank"
       rel="noopener noreferrer"
@@ -18,7 +18,7 @@ export default function Profile({ firstName, lastName, github }: ProfileProps) {
       <Image
         width={80}
         height={80}
-        className="size-20 rounded-full"
+        className="size-18 rounded-full"
         src={`https://github.com/${github}.png`}
         alt={`${github}'s avatar`}
         title={`sponsor by ${github}`}

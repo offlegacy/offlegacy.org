@@ -5,7 +5,7 @@ import { GrGithub } from 'react-icons/gr'
 import { MdEmail } from 'react-icons/md'
 import Tag from './components/Tag'
 import ProjectCard from './components/ProjectCard'
-import Profile from './components/Profile'
+import ProfileCard from './components/ProfileCard'
 import Section from './components/Section'
 import { FaDiscord } from 'react-icons/fa'
 import Button from './components/Button'
@@ -17,8 +17,8 @@ export default function Home() {
   return (
     <Screen>
       <Section>
-        <Image className="m-auto" src="/offlegacy.svg" alt="offlegacy logo" width={152} height={152} priority />
-        <h1 className="font-bold text-4xl">OffLegacy</h1>
+        <Image className="mb-6" src="/offlegacy.svg" alt="offlegacy logo" width={110} height={110} priority />
+        <h1 className="font-bold text-5xl">OffLegacy</h1>
         <div className="text-zinc-400">
           <p>Open-source Development Team in South Korea 🇰🇷 </p>
           <p>
@@ -39,7 +39,7 @@ export default function Home() {
       </Section>
       <Section>
         <h2 className="font-semibold text-3xl">Open Source Projects</h2>
-        <div className="space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <ProjectCard
             href="https://github.com/offlegacy/event-tracker"
             title="Event Tracker"
@@ -63,7 +63,7 @@ export default function Home() {
           <ProjectCard
             href="https://github.com/offlegacy/flags"
             title="Flags"
-            description="A lightweight and flexible feature flag system for React applications."
+            description="Flexible feature flag system for React applications."
             renderStatus={<Tag variant="yellow">ALPHA</Tag>}
             disabled
           />
@@ -74,17 +74,24 @@ export default function Home() {
             renderStatus={<Tag variant="yellow">ALPHA</Tag>}
             disabled
           />
+          <ProjectCard
+            href="https://github.com/offlegacy/sand-kit"
+            title="SandKit"
+            description="Code Playground."
+            renderStatus={<Tag variant="yellow">ALPHA</Tag>}
+            disabled
+          />
         </div>
       </Section>
       <Section>
-        <h2 className="font-semibold text-3xl">Meet the Developers</h2>
+        <h2 className="font-semibold text-3xl">Meet the Contributors</h2>
         <p className="text-zinc-400">
           We find joy in development and are passionate about contributing to and advancing the open-source ecosystem.
         </p>
         <div className="flex flex-wrap gap-6 pt-4">
-          <Profile firstName="Gwansik" lastName="Kim" github="gwansikk" />
-          <Profile firstName="Juhyeok" lastName="Kang" github="kangju2000" />
-          <Profile firstName="Taehwan" lastName="Hwang" github="stakbucks" />
+          <ProfileCard firstName="Gwansik" lastName="Kim" github="gwansikk" />
+          <ProfileCard firstName="Juhyeok" lastName="Kang" github="kangju2000" />
+          <ProfileCard firstName="Taehwan" lastName="Hwang" github="stakbucks" />
         </div>
       </Section>
       <Section className="border rounded-lg p-8 bg-zinc-900 border-zinc-800 ">

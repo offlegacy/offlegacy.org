@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { cn } from '../utils/style'
 
 interface ProjectCardProps {
   title: string
@@ -8,31 +9,35 @@ interface ProjectCardProps {
   disabled?: boolean
 }
 
+const styles = {
+  card: 'flex flex-col items-center p-3 bg-zinc-900 border border-zinc-800 transition-colors rounded-lg gap-2 h-[100px] text-left',
+  disabled: 'opacity-60',
+  hover: 'hover:bg-zinc-800',
+  title: 'font-semibold',
+  description: 'text-sm text-zinc-400 w-full text-left',
+  status: 'flex gap-6 justify-between items-center w-full',
+} as const
+
 export default function ProjectCard({ title, description, href, disabled, renderStatus }: ProjectCardProps) {
   if (disabled) {
     return (
-      <div className="flex gap-10 justify-between items-center py-2 px-4 bg-zinc-900 border border-zinc-800 transition-colors rounded-lg">
-        <div>
-          <h3 className="font-semibold">{title}</h3>
-          <p className="text-sm text-zinc-400">{description}</p>
+      <div className={cn(styles.card, styles.disabled)}>
+        <div className={styles.status}>
+          <h3 className={styles.title}>{title}</h3>
+          <div>{renderStatus}</div>
         </div>
-        <div>{renderStatus}</div>
+        <p className={styles.description}>{description}</p>
       </div>
     )
   }
 
   return (
-    <Link
-      href={href}
-      className="flex gap-10 justify-between items-center py-2 px-4 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 transition-colors rounded-lg"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <div>
-        <h3 className="font-semibold">{title}</h3>
-        <p className="text-sm text-zinc-400">{description}</p>
+    <Link href={href} className={cn(styles.card, styles.hover)} target="_blank" rel="noopener noreferrer">
+      <div className={styles.status}>
+        <h3 className={styles.title}>{title}</h3>
+        <div>{renderStatus}</div>
       </div>
-      <div>{renderStatus}</div>
+      <p className={styles.description}>{description}</p>
     </Link>
   )
 }

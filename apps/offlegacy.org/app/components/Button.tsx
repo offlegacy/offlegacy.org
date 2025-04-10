@@ -4,7 +4,10 @@ interface Props extends React.ComponentProps<'button'> {}
 
 export default function Button({ children, className, ...props }: Props) {
   return (
-    <button className={cn('bg-zinc-800 text-white p-2 rounded-lg', className)} {...props}>
+    <button
+      className={cn('bg-zinc-800 text-white p-2 rounded-lg hover:bg-zinc-700 transition-colors', className)}
+      {...props}
+    >
       {children}
     </button>
   )
