@@ -20,21 +20,23 @@ export default function Home() {
         <Image className="mb-6" src="/offlegacy.svg" alt="offlegacy logo" width={110} height={110} priority />
         <h1 className="font-bold text-5xl">OffLegacy</h1>
         <div className="text-zinc-400">
-          <p>Open-source Development Team in South Korea 🇰🇷 </p>
+          <p>Open-source Development Team in South Korea 🇰🇷</p>
           <p>
-            We design technology not just to work, but to last — focusing on solving pain points we face during
-            development, and sharing those solutions openly.
+            We believe that technology should be designed not just to function, but to last. At OffLegacy, we tackle
+            real problems we face during development and openly share sustainable solutions through open source.
           </p>
         </div>
       </Section>
       <Section>
         <h2 className="font-semibold text-3xl">Our Mission</h2>
         <p className="text-zinc-400">
-          It's about creating a sustainable technology ecosystem. Even when developing a single solution, the focus is
-          on designing it to be sustainable. The goal is to open source solutions that address pain points or
-          inconveniences encountered during development, or that solve issues in environments or with technologies that
-          are not yet standardized or widely adopted. Ultimately, the aim is to grow these into global open-source
-          libraries and expand the influence of Korean open source on the global stage.
+          We're building a sustainable technology ecosystem. Even when developing a single tool, we focus on designing
+          it with long-term usability in mind.
+        </p>
+        <p className="text-zinc-400">
+          Our goal is to open-source solutions that address real pain points—especially the kinds of challenges
+          developers face every day. Ultimately, we aim to grow these tools into global open-source libraries and expand
+          the influence of Korean open source on the international stage.
         </p>
       </Section>
       <Section>
@@ -84,9 +86,9 @@ export default function Home() {
         </div>
       </Section>
       <Section>
-        <h2 className="font-semibold text-3xl">Meet the Contributors</h2>
+        <h2 className="font-semibold text-3xl">Meet the Team</h2>
         <p className="text-zinc-400">
-          We find joy in development and are passionate about contributing to and advancing the open-source ecosystem.
+          We’re developers who find joy in coding and are passionate about contributing to the open-source ecosystem.
         </p>
         <div className="flex flex-wrap gap-6 pt-4">
           <ProfileCard firstName="Gwansik" lastName="Kim" github="gwansikk" />
@@ -94,9 +96,11 @@ export default function Home() {
           <ProfileCard firstName="Taehwan" lastName="Hwang" github="stakbucks" />
         </div>
       </Section>
-      <Section className="border rounded-lg p-8 bg-zinc-900 border-zinc-800 ">
+      <Section className="border rounded-lg px-8 py-6 bg-zinc-900 border-zinc-800 ">
         <h2 className="font-semibold text-3xl">Join the OffLegacy Community</h2>
-        <p className="text-gray-500">Join us to build an open source community, share stories, and grow together.</p>
+        <p className="text-gray-500">
+          OffLegacy is a space for open-source collaboration. Share your story, contribute your ideas, and grow with us.
+        </p>
         <div className="space-x-2">
           {IS_FLAGS_DISCORD && (
             <Button>
