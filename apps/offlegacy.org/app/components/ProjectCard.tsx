@@ -11,7 +11,7 @@ interface ProjectCardProps {
 
 const styles = {
   card: 'flex flex-col items-center p-3 bg-zinc-900 border border-zinc-800 transition-colors rounded-lg gap-2 h-[100px] text-left',
-  disabled: 'opacity-60',
+  disabled: 'opacity-70',
   hover: 'hover:bg-zinc-800',
   title: 'font-semibold',
   description: 'text-sm text-zinc-400 w-full text-left',

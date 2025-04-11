@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
-import { GeistSans } from 'geist/font/sans'
+import { Inter } from 'next/font/google'
 import './globals.css'
+
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'OffLegacy',
@@ -14,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${GeistSans.className} bg-[#050505] text-[#fff]`}>{children}</body>
+      <body className={`${inter.className} bg-[#050505] text-[#fff]`}>{children}</body>
     </html>
   )
 }

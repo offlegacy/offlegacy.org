@@ -10,8 +10,7 @@ import Section from './components/Section'
 import { FaDiscord } from 'react-icons/fa'
 import Button from './components/Button'
 import Footer from './components/Footer'
-
-const IS_FLAGS_DISCORD = false
+import { PROJECT_STATUS } from './constants'
 
 export default function Home() {
   return (
@@ -46,41 +45,41 @@ export default function Home() {
             href="https://event-tracker.offlegacy.org"
             title="Event Tracker"
             description="Comprehensive solution for event tracking in React applications."
-            renderStatus={<Tag variant="blue">NEW</Tag>}
+            renderStatus={<Tag variant="blue">{PROJECT_STATUS.NEW}</Tag>}
           />
           <ProjectCard
             href="https://github.com/offlegacy/git-intent"
             title="Git Intent"
             description="Git workflow tool for intentional commits."
-            renderStatus={<Tag variant="yellow">ALPHA</Tag>}
+            renderStatus={<Tag variant="yellow">{PROJECT_STATUS.ALPHA}</Tag>}
             disabled
           />
           <ProjectCard
             href="https://github.com/offlegacy/vscode-yarn-catalog-lens"
             title="VSCode Yarn Catalog Lens"
             description="VSCode extension for Yarn Catalog."
-            renderStatus={<Tag variant="yellow">ALPHA</Tag>}
+            renderStatus={<Tag variant="yellow">{PROJECT_STATUS.ALPHA}</Tag>}
             disabled
           />
           <ProjectCard
             href="https://github.com/offlegacy/flags"
             title="Flags"
             description="Flexible feature flag system for React applications."
-            renderStatus={<Tag variant="yellow">ALPHA</Tag>}
+            renderStatus={<Tag variant="yellow">{PROJECT_STATUS.ALPHA}</Tag>}
             disabled
           />
           <ProjectCard
             href="https://github.com/offlegacy/react-start"
             title="React Start"
             description="React execution pipeline."
-            renderStatus={<Tag variant="yellow">ALPHA</Tag>}
+            renderStatus={<Tag variant="yellow">{PROJECT_STATUS.ALPHA}</Tag>}
             disabled
           />
           <ProjectCard
             href="https://github.com/offlegacy/sand-kit"
             title="SandKit"
             description="Code Playground."
-            renderStatus={<Tag variant="yellow">ALPHA</Tag>}
+            renderStatus={<Tag variant="yellow">{PROJECT_STATUS.ALPHA}</Tag>}
             disabled
           />
         </div>
@@ -88,7 +87,7 @@ export default function Home() {
       <Section>
         <h2 className="font-semibold text-3xl">Meet the Team</h2>
         <p className="text-zinc-400">
-          We’re developers who find joy in coding and are passionate about contributing to the open-source ecosystem.
+          We're developers who find joy in coding and are passionate about contributing to the open-source ecosystem.
         </p>
         <div className="flex flex-wrap gap-6 pt-4">
           <ProfileCard firstName="Gwansik" lastName="Kim" github="gwansikk" />
@@ -96,19 +95,18 @@ export default function Home() {
           <ProfileCard firstName="Taehwan" lastName="Hwang" github="stakbucks" />
         </div>
       </Section>
-      <Section className="border rounded-lg px-8 py-6 bg-zinc-900 border-zinc-800 ">
+      <Section className="border rounded-lg px-8 py-6 bg-zinc-900 border-zinc-800">
         <h2 className="font-semibold text-3xl">Join the OffLegacy Community</h2>
-        <p className="text-gray-500">
+        <p className="text-zinc-400">
           OffLegacy is a space for open-source collaboration. Share your story, contribute your ideas, and grow with us.
         </p>
-        <div className="space-x-2">
-          {IS_FLAGS_DISCORD && (
-            <Button>
-              <Link href="">
-                <FaDiscord size={24} />
-              </Link>
-            </Button>
-          )}
+        <div className="flex items-center gap-2">
+          <Button className="bg-[#546BBD] hover:bg-[#546BBD]/90 shadow-md shadow-[#546BBD]/50">
+            <div className="flex items-center gap-2">
+              <FaDiscord size={24} />
+              <span className="text-sm font-semibold">JOIN OFFLEGACY DISCORD</span>
+            </div>
+          </Button>
           <Button>
             <Link href="https://github.com/offlegacy">
               <GrGithub size={24} />
