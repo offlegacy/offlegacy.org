@@ -12,11 +12,13 @@ import Button from './components/Button'
 import Footer from './components/Footer'
 import { PROJECT_STATUS } from './constants'
 
+const IS_DEV = process.env.NODE_ENV === 'development'
+
 export default function Home() {
   return (
     <Screen>
       <Section>
-        <Image className="mb-6" src="/offlegacy.svg" alt="offlegacy logo" width={110} height={110} priority />
+        <Image className="mb-10" src="/offlegacy.svg" alt="offlegacy logo" width={110} height={110} priority />
         <h1 className="font-bold text-5xl">OffLegacy</h1>
         <div className="text-zinc-400">
           <p>Open-source Development Team in South Korea 🇰🇷</p>
@@ -84,6 +86,7 @@ export default function Home() {
           />
         </div>
       </Section>
+      {IS_DEV && <LatestNews />}
       <Section>
         <h2 className="font-semibold text-3xl">Meet the Team</h2>
         <p className="text-zinc-400">
@@ -100,11 +103,11 @@ export default function Home() {
         <p className="text-zinc-400">
           OffLegacy is a space for open-source collaboration. Share your story, contribute your ideas, and grow with us.
         </p>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-4 flex-wrap">
           <Button className="bg-[#546BBD] hover:bg-[#546BBD]/90 shadow-md shadow-[#546BBD]/50">
             <div className="flex items-center gap-2">
               <FaDiscord size={24} />
-              <span className="text-sm font-semibold">JOIN OFFLEGACY DISCORD</span>
+              <span className="text-sm font-semibold whitespace-nowrap">JOIN OFFLEGACY DISCORD</span>
             </div>
           </Button>
           <Button>
@@ -121,5 +124,29 @@ export default function Home() {
       </Section>
       <Footer />
     </Screen>
+  )
+}
+
+/**
+ * TODO: Add Latest News
+ * @deprecated
+ */
+function LatestNews() {
+  return (
+    <Section>
+      <h2 className="font-semibold text-3xl">Latest News</h2>
+      <div className="flex flex-col gap-4">
+        <div className="flex gap-2 items-center">
+          <span className="size-2 rounded-full bg-sky-500" />
+          <span className="text-zinc-400 after:content-['-'] after:ml-2">
+            {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+          </span>
+          <span className="text-zinc-400">Event Tracker v0.1.0 released</span>
+        </div>
+        <button type="button" className="text-zinc-400 hover:underline w-fit">
+          Show more news
+        </button>
+      </div>
+    </Section>
   )
 }
