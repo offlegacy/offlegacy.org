@@ -51,9 +51,8 @@ export default function Home() {
           <ProjectCard
             href="https://github.com/offlegacy/git-intent"
             title="Git Intent"
-            description="Git workflow tool for intentional commits."
-            renderStatus={<Tag variant="yellow">{PROJECT_STATUS.ALPHA}</Tag>}
-            disabled
+            description="Git workflow tool for intentional commits — define your commit intentions first for clearer, more atomic changes."
+            renderStatus={<Tag variant="green">{PROJECT_STATUS.BETA}</Tag>}
           />
           <ProjectCard
             href="https://github.com/offlegacy/vscode-yarn-catalog-lens"
@@ -88,6 +87,12 @@ export default function Home() {
       <Section>
         <h2 className="font-semibold text-3xl">Latest News</h2>
         <div className="flex flex-col gap-2">
+          <NewsLine
+            variant="info"
+            title="Git Intent v0.0.1 released"
+            date={new Date('2025-04-12')}
+            href="https://github.com/offlegacy/git-intent/releases/tag/v0.0.1"
+          />
           <NewsLine
             variant="info"
             title="Event Tracker v1.0.0 released"
