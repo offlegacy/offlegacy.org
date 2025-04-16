@@ -11,8 +11,7 @@ import { FaDiscord } from 'react-icons/fa'
 import Button from './components/Button'
 import Footer from './components/Footer'
 import { PROJECT_STATUS } from './constants'
-
-const IS_DEV = process.env.NODE_ENV === 'development'
+import NewsLine from './components/NewsLine'
 
 export default function Home() {
   return (
@@ -86,7 +85,17 @@ export default function Home() {
           />
         </div>
       </Section>
-      {IS_DEV && <LatestNews />}
+      <Section>
+        <h2 className="font-semibold text-3xl">Latest News</h2>
+        <div className="flex flex-col gap-2">
+          <NewsLine
+            variant="info"
+            title="Event Tracker v1.0.0 released"
+            date={new Date('2024-12-31')}
+            href="https://github.com/offlegacy/event-tracker/releases/tag/v1.1.0"
+          />
+        </div>
+      </Section>
       <Section>
         <h2 className="font-semibold text-3xl">Meet the Team</h2>
         <p className="text-zinc-400">
@@ -124,29 +133,5 @@ export default function Home() {
       </Section>
       <Footer />
     </Screen>
-  )
-}
-
-/**
- * TODO: Add Latest News
- * @deprecated
- */
-function LatestNews() {
-  return (
-    <Section>
-      <h2 className="font-semibold text-3xl">Latest News</h2>
-      <div className="flex flex-col gap-4">
-        <div className="flex gap-2 items-center">
-          <span className="size-2 rounded-full bg-sky-500" />
-          <span className="text-zinc-400 after:content-['-'] after:ml-2">
-            {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-          </span>
-          <span className="text-zinc-400">Event Tracker v0.1.0 released</span>
-        </div>
-        <button type="button" className="text-zinc-400 hover:underline w-fit">
-          Show more news
-        </button>
-      </div>
-    </Section>
   )
 }
