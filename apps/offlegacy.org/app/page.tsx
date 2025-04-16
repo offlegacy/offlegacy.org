@@ -89,7 +89,7 @@ export default function Home() {
         <div className="flex flex-col gap-2">
           <NewsLine
             variant="info"
-            title="Git Intent v0.1.0 released"
+            title="Git Intent v0.0.1 released"
             date={new Date('2025-04-12')}
             href="https://github.com/offlegacy/git-intent/releases/tag/v0.0.1"
           />
