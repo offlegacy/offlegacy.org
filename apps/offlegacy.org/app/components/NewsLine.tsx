@@ -17,7 +17,12 @@ interface Props {
 
 export default function NewsLine({ variant, title, date, href }: Props) {
   return (
-    <Link href={href} className="flex gap-4 items-center hover:bg-zinc-900 transition-colors rounded-lg p-2">
+    <Link
+      href={href}
+      className="flex gap-4 items-center hover:bg-zinc-900 transition-colors rounded-lg p-2"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <span className={cn('size-2 rounded-full', VARIANTS[variant])} />
       <div className="flex md:items-center md:flex-row flex-col-reverse text-zinc-400">
         <span className="md:after:content-['-'] after:mx-2 md:text-zinc-400 text-zinc-500">
