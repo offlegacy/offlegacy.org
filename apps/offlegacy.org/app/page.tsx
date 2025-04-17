@@ -12,12 +12,13 @@ import Button from './components/Button'
 import Footer from './components/Footer'
 import { PROJECT_STATUS } from './constants'
 import NewsLine from './components/NewsLine'
+import SpinningText from './components/SpinningText'
 
 export default function Home() {
   return (
     <Screen>
       <Section>
-        <Image className="mb-10" src="/offlegacy.svg" alt="offlegacy logo" width={110} height={110} priority />
+        <Image className="mb-10 size-28" src="/offlegacy.svg" alt="offlegacy logo" width={112} height={112} priority />
         <h1 className="font-bold text-5xl">OffLegacy</h1>
         <div className="text-zinc-400">
           <p>Open-source Development Team in South Korea 🇰🇷</p>
@@ -112,11 +113,26 @@ export default function Home() {
           <ProfileCard firstName="Taehwan" lastName="Hwang" github="stakbucks" />
         </div>
       </Section>
-      <Section className="border rounded-lg px-8 py-6 bg-zinc-900 border-zinc-800">
-        <h2 className="font-semibold text-3xl">Join the OffLegacy Community</h2>
-        <p className="text-zinc-400">
-          OffLegacy is a space for open-source collaboration. Share your story, contribute your ideas, and grow with us.
-        </p>
+      <Section className="border rounded-lg px-8 py-6 bg-zinc-900 border-zinc-800 space-y-8">
+        <div className="space-y-4">
+          <div className="flex items-center justify-between gap-2">
+            <h2 className="font-semibold text-3xl">Join the OffLegacy Community</h2>
+            <SpinningText
+              radius={6}
+              fontSize={0.4}
+              className="font-medium leading-none hidden md:block"
+              renderLogo={
+                <Image className="size-8" src="/offlegacy.svg" alt="offlegacy logo" width={32} height={32} priority />
+              }
+            >
+              {'OffLegacy • OffLegacy • OffLegacy • '}
+            </SpinningText>
+          </div>
+          <p className="text-zinc-400">
+            OffLegacy is a space for open-source collaboration. Share your story, contribute your ideas, and grow with
+            us.
+          </p>
+        </div>
         <div className="flex items-center gap-4 flex-wrap">
           <Button className="bg-[#546BBD] hover:bg-[#546BBD]/90 shadow-md shadow-[#546BBD]/50">
             <div className="flex items-center gap-2">
