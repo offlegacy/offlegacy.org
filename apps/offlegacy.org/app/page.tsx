@@ -7,12 +7,11 @@ import Tag from './components/Tag'
 import ProjectCard from './components/ProjectCard'
 import ProfileCard from './components/ProfileCard'
 import Section from './components/Section'
-import { FaDiscord } from 'react-icons/fa'
 import Button from './components/Button'
 import Footer from './components/Footer'
 import { PROJECT_STATUS } from './constants'
 import NewsLine from './components/NewsLine'
-import SpinningText from './components/SpinningText'
+import DiscordButton from './components/DiscordButton'
 
 export default function Home() {
   return (
@@ -96,8 +95,8 @@ export default function Home() {
           />
           <NewsLine
             variant="info"
-            title="Event Tracker v1.0.0 released"
-            date={new Date('2024-12-31')}
+            title="Event Tracker v1.1.0 released"
+            date={new Date('2025-01-30')}
             href="https://github.com/offlegacy/event-tracker/releases/tag/v1.1.0"
           />
         </div>
@@ -134,12 +133,7 @@ export default function Home() {
           </p>
         </div>
         <div className="flex items-center gap-4 flex-wrap">
-          <Button className="bg-[#546BBD] hover:bg-[#546BBD]/90 shadow-md shadow-[#546BBD]/50">
-            <div className="flex items-center gap-2">
-              <FaDiscord size={24} />
-              <span className="text-sm font-semibold whitespace-nowrap">JOIN OFFLEGACY DISCORD</span>
-            </div>
-          </Button>
+          <DiscordButton />
           <Button>
             <Link href="https://github.com/offlegacy">
               <GrGithub size={24} />
