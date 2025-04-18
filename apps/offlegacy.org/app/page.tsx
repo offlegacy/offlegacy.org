@@ -9,10 +9,10 @@ import ProfileCard from './components/ProfileCard'
 import Section from './components/Section'
 import Button from './components/Button'
 import Footer from './components/Footer'
-import { PROJECT_STATUS } from './constants'
 import NewsLine from './components/NewsLine'
 import DiscordButton from './components/DiscordButton'
 import TeamBadge from './components/TeamBadge'
+import { getMembers, getNews, getProjects } from './data-access-layer'
 
 export default function Home() {
   return (
@@ -43,63 +43,24 @@ export default function Home() {
       <Section>
         <h2 className="font-semibold text-3xl">Open Source Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <ProjectCard
-            href="https://event-tracker.offlegacy.org"
-            title="Event Tracker"
-            description="Comprehensive solution for event tracking in React applications."
-            renderStatus={<Tag variant="blue">{PROJECT_STATUS.NEW}</Tag>}
-          />
-          <ProjectCard
-            href="https://github.com/offlegacy/git-intent"
-            title="Git Intent"
-            description="Git workflow tool for intentional commits — define your commit intentions first for clearer, more atomic changes."
-            renderStatus={<Tag variant="green">{PROJECT_STATUS.BETA}</Tag>}
-          />
-          <ProjectCard
-            href="https://github.com/offlegacy/vscode-yarn-catalog-lens"
-            title="VSCode Yarn Catalog Lens"
-            description="VSCode extension for Yarn Catalog."
-            renderStatus={<Tag variant="yellow">{PROJECT_STATUS.ALPHA}</Tag>}
-            disabled
-          />
-          <ProjectCard
-            href="https://github.com/offlegacy/flags"
-            title="Flags"
-            description="Flexible feature flag system for React applications."
-            renderStatus={<Tag variant="yellow">{PROJECT_STATUS.ALPHA}</Tag>}
-            disabled
-          />
-          <ProjectCard
-            href="https://github.com/offlegacy/react-start"
-            title="React Start"
-            description="React execution pipeline."
-            renderStatus={<Tag variant="yellow">{PROJECT_STATUS.ALPHA}</Tag>}
-            disabled
-          />
-          <ProjectCard
-            href="https://github.com/offlegacy/sand-kit"
-            title="SandKit"
-            description="Code Playground."
-            renderStatus={<Tag variant="yellow">{PROJECT_STATUS.ALPHA}</Tag>}
-            disabled
-          />
+          {getProjects().map((project) => (
+            <ProjectCard
+              key={project.id}
+              title={project.name}
+              description={project.description}
+              href={project.url}
+              renderStatus={<Tag variant={project.badgeColor}>{project.status}</Tag>}
+              disabled={project.disabled}
+            />
+          ))}
         </div>
       </Section>
       <Section>
         <h2 className="font-semibold text-3xl">Latest News</h2>
         <div className="flex flex-col gap-2">
-          <NewsLine
-            variant="info"
-            title="Git Intent v0.0.1 released"
-            date={new Date('2025-04-12')}
-            href="https://github.com/offlegacy/git-intent/releases/tag/v0.0.1"
-          />
-          <NewsLine
-            variant="info"
-            title="Event Tracker v1.1.0 released"
-            date={new Date('2025-01-30')}
-            href="https://github.com/offlegacy/event-tracker/releases/tag/v1.1.0"
-          />
+          {getNews().map((news) => (
+            <NewsLine key={news.id} variant="info" title={news.title} date={news.date} href={news.href} />
+          ))}
         </div>
       </Section>
       <Section>
@@ -108,9 +69,14 @@ export default function Home() {
           We're developers who find joy in coding and are passionate about contributing to the open-source ecosystem.
         </p>
         <div className="flex flex-wrap gap-6 pt-4">
-          <ProfileCard firstName="Gwansik" lastName="Kim" github="gwansikk" />
-          <ProfileCard firstName="Juhyeok" lastName="Kang" github="kangju2000" />
-          <ProfileCard firstName="Taehwan" lastName="Hwang" github="stakbucks" />
+          {getMembers().map((member) => (
+            <ProfileCard
+              key={member.id}
+              firstName={member.firstName}
+              lastName={member.lastName}
+              github={member.github}
+            />
+          ))}
         </div>
       </Section>
       <Section className="border rounded-lg px-8 py-6 bg-zinc-900 border-zinc-800 space-y-8">
@@ -119,7 +85,7 @@ export default function Home() {
             <h2 className="font-semibold text-3xl">Join the OffLegacy Community</h2>
             <TeamBadge />
           </div>
-          <p className="text-zinc-400">
+          <p className="text-zinc-400 md:pr-10">
             OffLegacy is a space for open-source collaboration. Share your story, contribute your ideas, and grow with
             us.
           </p>
