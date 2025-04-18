@@ -12,6 +12,7 @@ import Footer from './components/Footer'
 import { PROJECT_STATUS } from './constants'
 import NewsLine from './components/NewsLine'
 import DiscordButton from './components/DiscordButton'
+import TeamBadge from './components/TeamBadge'
 
 export default function Home() {
   return (
@@ -114,18 +115,9 @@ export default function Home() {
       </Section>
       <Section className="border rounded-lg px-8 py-6 bg-zinc-900 border-zinc-800 space-y-8">
         <div className="space-y-4">
-          <div className="flex items-center justify-between gap-2">
+          <div className="flex gap-4 flex-col-reverse items-center justify-between text-center md:flex-row md:text-left">
             <h2 className="font-semibold text-3xl">Join the OffLegacy Community</h2>
-            <SpinningText
-              radius={6}
-              fontSize={0.4}
-              className="font-medium leading-none hidden md:block"
-              renderLogo={
-                <Image className="size-8" src="/offlegacy.svg" alt="offlegacy logo" width={32} height={32} priority />
-              }
-            >
-              {'OffLegacy • OffLegacy • OffLegacy • '}
-            </SpinningText>
+            <TeamBadge />
           </div>
           <p className="text-zinc-400">
             OffLegacy is a space for open-source collaboration. Share your story, contribute your ideas, and grow with
