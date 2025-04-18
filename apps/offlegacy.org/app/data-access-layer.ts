@@ -65,7 +65,7 @@ export function getProjects() {
 const NEWS = [
   {
     id: 1,
-    title: 'Event Tracker v1.0.0 released',
+    title: 'Event Tracker v1.1.0 released',
     date: new Date('2025-01-30'),
     href: 'https://github.com/offlegacy/event-tracker/releases/tag/v1.1.0',
   },
