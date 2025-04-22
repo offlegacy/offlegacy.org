@@ -93,12 +93,12 @@ export default function Home() {
         <div className="flex items-center gap-4 flex-wrap">
           <DiscordButton />
           <Button>
-            <Link href="https://github.com/offlegacy">
+            <Link href="https://github.com/offlegacy" target="_blank" rel="noopener noreferrer">
               <GrGithub size={24} />
             </Link>
           </Button>
           <Button>
-            <Link href="mailto:contact@offlegacy.org">
+            <Link href="mailto:contact@offlegacy.org" target="_blank" rel="noopener noreferrer">
               <MdEmail size={24} />
             </Link>
           </Button>
