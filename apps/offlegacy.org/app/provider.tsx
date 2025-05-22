@@ -20,7 +20,7 @@ export default function Provider({ children }: { children: React.ReactNode }) {
   return (
     <PHProvider client={posthog}>
       <SuspendedPostHogPageView />
-      <Track.Provider initialContext={{ userId: 'dev-test' }}>{children}</Track.Provider>
+      <Track.Provider>{children}</Track.Provider>
     </PHProvider>
   )
 }
