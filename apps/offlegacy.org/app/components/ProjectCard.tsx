@@ -2,12 +2,13 @@ import Link from 'next/link'
 import { cn } from '../utils/style'
 
 const styles = {
-  card: 'flex flex-col items-center p-3 bg-zinc-900 border border-zinc-800 transition-colors rounded-lg gap-2 h-[120px] text-left',
-  disabled: 'opacity-70',
+  card: 'flex flex-col items-center bg-zinc-900 transition-colors gap-2 h-[160px] text-left outline outline-zinc-800 p-6',
+  disabled: 'bg-[#0A0A0A]',
   hover: 'hover:bg-zinc-800',
-  title: 'font-semibold',
+  title: 'font-semibold pb-4',
   description: 'text-sm text-zinc-400 w-full text-left',
-  status: 'flex gap-6 justify-between items-center w-full',
+  status: 'flex gap-6 justify-between items-start w-full',
+  disabledStatus: 'text-zinc-400',
 } as const
 
 interface ProjectCardProps {

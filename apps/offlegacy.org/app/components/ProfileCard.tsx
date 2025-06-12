@@ -10,7 +10,7 @@ interface ProfileProps {
 export default function ProfileCard({ firstName, lastName, github }: ProfileProps) {
   return (
     <Link
-      className="flex flex-col items-center gap-2 text-xs"
+      className="flex flex-col items-center gap-2 text-xs outline outline-zinc-800 p-6 hover:bg-zinc-900 transition-colors bg-[#0A0A0A]"
       href={`https://github.com/${github}`}
       target="_blank"
       rel="noopener noreferrer"

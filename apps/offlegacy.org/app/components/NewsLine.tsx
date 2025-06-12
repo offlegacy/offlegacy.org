@@ -19,7 +19,7 @@ export default function NewsLine({ variant, title, date, href }: Props) {
   return (
     <Link
       href={href}
-      className="flex gap-4 items-center hover:bg-zinc-900 transition-colors rounded-lg p-2"
+      className="flex gap-4 items-center hover:bg-zinc-900 transition-colors px-6 py-4 outline outline-zinc-800 bg-[#0A0A0A]"
       target="_blank"
       rel="noopener noreferrer"
     >
