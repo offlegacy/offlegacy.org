@@ -1,5 +1,5 @@
 export const PROJECT_STATUS = {
-  POC: 'POC',
+  WIP: 'WIP',
   ALPHA: 'ALPHA',
   BETA: 'BETA',
   NEW: 'NEW',

@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'OffLegacy',
-  description: 'Open-source Development Team in South Korea 🇰🇷',
+  description: 'We help developers make and maintain products sustainably — with better tools.',
 }
 
 export default function RootLayout({

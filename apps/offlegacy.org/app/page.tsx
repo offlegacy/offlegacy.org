@@ -18,39 +18,42 @@ export default function Home() {
   return (
     <Screen>
       <Image
-        className="m-auto mt-10 size-28"
+        className="m-auto my-10 size-28"
         src="/offlegacy.svg"
         alt="offlegacy logo"
         width={112}
         height={112}
         priority
       />
-      <div className="flex flex-col space-y-16 my-10">
+      <Section className="flex flex-col items-start justify-center space-y-6 p-6">
+        <h1 className="font-bold text-6xl">OffLegacy</h1>
+        <p className="text-4xl font-semibold">
+          We help developers make and maintain products sustainably — with better tools.
+        </p>
+      </Section>
+      <div className="flex flex-col space-y-16 mb-10">
         <Section>
-          <h1 className="font-bold text-5xl p-6 border-b border-zinc-800">OffLegacy</h1>
-          <div className="text-zinc-400 p-6">
-            <p>Open-source Development Team in South Korea 🇰🇷</p>
-            <p>
-              We believe that technology should be designed not just to function, but to last. At OffLegacy, we tackle
-              real problems we face during development and openly share sustainable solutions through open source.
-            </p>
-          </div>
+          <p className="text-zinc-400 p-6">
+            We believe that technology should be designed not just to function, but to last. At OffLegacy, we tackle
+            real problems we face during development and openly share sustainable solutions through open source.
+          </p>
         </Section>
         <Section>
           <h2 className="font-semibold text-3xl p-6 border-b border-zinc-800">Our Mission</h2>
-          <div className="text-zinc-400 p-6">
-            {/* <h3 className="font-semibold text-2xl">Mission1</h3> */}
-            <p>
-              We're building a sustainable technology ecosystem. Even when developing a single tool, we focus on
-              designing it with long-term usability in mind.
+          <div className="p-6 space-y-4">
+            <h3 className="font-semibold text-2xl">Building Sustainable Tools.</h3>
+            <p className="text-zinc-400 ">
+              While software frameworks have rapidly advanced, development tools still present many inconveniences. By
+              excellently solving the complexities and repetitive issues encountered in the development process, we are
+              building a sustainable ecosystem.
             </p>
           </div>
-          <div className="text-zinc-400 p-6 pt-0">
-            {/* <h3 className="font-semibold text-2xl">Mission2</h3> */}
-            <p>
-              Our goal is to open-source solutions that address real pain points—especially the kinds of challenges
-              developers face every day. Ultimately, we aim to grow these tools into global open-source libraries and
-              expand the influence of Korean open source on the international stage.
+          <div className="p-6 space-y-4">
+            <h3 className="font-semibold text-2xl">Fostering an Open Source Culture.</h3>
+            <p className="text-zinc-400 ">
+              We are a team that started in South Korea 🇰🇷. Although the open source culture has not yet fully taken
+              root in Korea, we are striving to change that. By proactively developing libraries and fostering a healthy
+              open source culture, we aim to enable world-class open source projects to thrive in Korea as well.
             </p>
           </div>
         </Section>
