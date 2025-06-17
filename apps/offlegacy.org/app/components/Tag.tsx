@@ -15,10 +15,7 @@ interface Props {
 export default function Tag({ variant, children }: Props) {
   return (
     <div
-      className={cn(
-        'bg-zinc-800 text-zinc-200 font-medium py-0.5 rounded text-xs text-center px-2 shadow-md',
-        styles[variant]
-      )}
+      className={cn('bg-zinc-800 text-zinc-200 font-medium py-1 text-xs text-center px-2 shadow-md', styles[variant])}
     >
       {children}
     </div>

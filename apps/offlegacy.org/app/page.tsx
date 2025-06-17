@@ -96,18 +96,18 @@ export default function Home() {
             ))}
           </div>
         </Section>
-        <Section className="outline px-8 py-6 bg-zinc-900 outline-zinc-800 space-y-8 p-6">
-          <div className="space-y-4">
+        <Section className="outline bg-zinc-900 outline-zinc-800 space-y-8">
+          <div className="space-y-4 px-8 py-6">
             <div className="flex gap-4 flex-col-reverse items-center justify-between text-center md:flex-row md:text-left">
               <h2 className="font-semibold text-3xl">Join the OffLegacy Community</h2>
-              <TeamBadge />
+              <TeamBadge className="mt-2" />
             </div>
             <p className="text-zinc-400 md:pr-10">
               OffLegacy is a space for open-source collaboration. Share your story, contribute your ideas, and grow with
               us.
             </p>
           </div>
-          <div className="flex items-center gap-4 flex-wrap">
+          <div className="flex items-center gap-4 flex-wrap outline outline-zinc-800 px-8">
             <DiscordButton />
             <Button>
               <Link href="https://github.com/offlegacy" target="_blank" rel="noopener noreferrer">
