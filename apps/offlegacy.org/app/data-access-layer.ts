@@ -58,11 +58,11 @@ const PROJECTS = [
   // },
   {
     id: 7,
-    name: 'StackOverlay',
-    description: 'Stack-based overlay manager',
+    name: 'Overlay',
+    description: 'Ultimate overlay management',
     status: PROJECT_STATUS.WIP,
     badgeColor: 'yellow',
-    url: 'https://github.com/offlegacy/stackoverlay',
+    url: 'https://github.com/offlegacy/overlay',
     disabled: true,
   },
 ] as const
