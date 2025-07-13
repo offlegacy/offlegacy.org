@@ -65,6 +65,15 @@ const PROJECTS = [
     url: 'https://github.com/offlegacy/overlay',
     disabled: true,
   },
+  {
+    id: 8,
+    name: 'nuqs-hash-router',
+    description: 'nuqs adaptor for hash router (unofficial)',
+    status: PROJECT_STATUS.BETA,
+    badgeColor: 'green',
+    url: 'https://github.com/offlegacy/nuqs-hash-router',
+    disabled: false,
+  },
 ] as const
 
 export function getProjects() {

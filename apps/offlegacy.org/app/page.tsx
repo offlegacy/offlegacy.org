@@ -41,19 +41,19 @@ export default function Home() {
         <Section>
           <h2 className="font-semibold text-3xl p-6 border-b border-zinc-800">Our Mission</h2>
           <div className="p-6 space-y-4">
-            <h3 className="font-semibold text-2xl">Building Sustainable Tools.</h3>
+            <h3 className="font-semibold text-2xl">Sustainable Ecosystem</h3>
             <p className="text-zinc-400 ">
-              While software frameworks have rapidly advanced, development tools still present many inconveniences. By
-              excellently solving the complexities and repetitive issues encountered in the development process, we are
-              building a sustainable ecosystem.
+              Frameworks have evolved rapidly, but development tools remain inconvenient or disconnected. We aim to
+              bridge this gap and create a sustainable ecosystem by going beyond simple implementation to build
+              technologies that are maintainable and scalable in the long term.
             </p>
           </div>
           <div className="p-6 space-y-4">
-            <h3 className="font-semibold text-2xl">Fostering an Open Source Culture.</h3>
+            <h3 className="font-semibold text-2xl">Open Source Culture</h3>
             <p className="text-zinc-400 ">
-              We are a team that started in South Korea 🇰🇷. Although the open source culture has not yet fully taken
-              root in Korea, we are striving to change that. By proactively developing libraries and fostering a healthy
-              open source culture, we aim to enable world-class open source projects to thrive in Korea as well.
+              We are a team that started in South Korea 🇰🇷. In Korea, open source culture has yet to take root. We
+              strive to foster a healthy open source culture so that world-class open source projects can start and grow
+              in Korea as well.
             </p>
           </div>
         </Section>
