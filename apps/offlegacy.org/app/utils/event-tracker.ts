@@ -19,15 +19,11 @@ const schemas = {
   }),
 }
 
-const [Track] = createTracker<Context, Params, typeof schemas>({
+export const [Track, useTrack] = createTracker<Context, Params, typeof schemas>({
   DOMEvents: {
     onClick: (params: Params) => {
       posthog.capture(params.event)
     },
   },
-  schema: {
-    schemas,
-  },
+  schema: { schemas },
 })
-
-export default Track
