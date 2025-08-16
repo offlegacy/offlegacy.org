@@ -6,7 +6,7 @@ import { usePostHog } from 'posthog-js/react'
 
 import posthog from 'posthog-js'
 import { PostHogProvider as PHProvider } from 'posthog-js/react'
-import Track from './utils/event-tracker'
+import { Track } from './utils/event-tracker'
 
 export default function Provider({ children }: { children: React.ReactNode }) {
   useEffect(() => {

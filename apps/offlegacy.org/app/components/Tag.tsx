@@ -2,9 +2,8 @@ import { cn } from '../utils/style'
 
 const styles = {
   blue: 'bg-blue-800 shadow-blue-800/50',
-  yellow: 'bg-yellow-800 shadow-yellow-800/50',
+  gray: 'bg-gray-800 shadow-gray-800/50',
   green: 'bg-green-800 shadow-green-800/50',
-  red: 'bg-red-800 shadow-red-800/50',
 } as const
 
 interface Props {

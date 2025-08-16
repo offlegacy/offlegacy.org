@@ -9,10 +9,9 @@ import ProfileCard from './components/ProfileCard'
 import Section from './components/Section'
 import Button from './components/Button'
 import Footer from './components/Footer'
-import NewsLine from './components/NewsLine'
 import DiscordButton from './components/DiscordButton'
 import TeamBadge from './components/TeamBadge'
-import { getMembers, getNews, getProjects } from './data-access-layer'
+import { getMembers, getProjects } from './data-access-layer'
 
 export default function Home() {
   return (
@@ -27,9 +26,7 @@ export default function Home() {
       />
       <Section className="flex flex-col items-start justify-center space-y-6 p-6">
         <h1 className="font-bold text-6xl">OffLegacy</h1>
-        <p className="text-4xl font-semibold">
-          We help developers make and maintain products sustainably — with better tools.
-        </p>
+        <p className="text-4xl font-semibold">We help developers make products sustainably — with better tools</p>
       </Section>
       <div className="flex flex-col space-y-16 mb-10">
         <Section>
@@ -41,7 +38,7 @@ export default function Home() {
         <Section>
           <h2 className="font-semibold text-3xl p-6 border-b border-zinc-800">Our Mission</h2>
           <div className="p-6 space-y-4">
-            <h3 className="font-semibold text-2xl">Sustainable Ecosystem</h3>
+            <h3 className="font-semibold text-2xl">Sustainable Tools</h3>
             <p className="text-zinc-400 ">
               Frameworks have evolved rapidly, but development tools remain inconvenient or disconnected. We aim to
               bridge this gap and create a sustainable ecosystem by going beyond simple implementation to build
@@ -66,24 +63,25 @@ export default function Home() {
                 title={project.name}
                 description={project.description}
                 href={project.url}
-                renderStatus={<Tag variant={project.badgeColor}>{project.status}</Tag>}
+                renderStatus={project.status ? <Tag variant={project.badgeColor}>{project.status}</Tag> : null}
                 disabled={project.disabled}
               />
             ))}
           </div>
         </Section>
-        <Section>
+        {/* <Section>
           <h2 className="font-semibold text-3xl p-6 border-b border-zinc-800">Latest News</h2>
           <div className="flex flex-col">
             {getNews().map((news) => (
               <NewsLine key={news.id} variant="info" title={news.title} date={news.date} href={news.href} />
             ))}
           </div>
-        </Section>
+        </Section> */}
         <Section>
           <h2 className="font-semibold text-3xl p-6 border-b border-zinc-800">Meet the Team</h2>
           <p className="text-zinc-400 p-6">
-            We're developers who find joy in coding and are passionate about contributing to the open-source ecosystem.
+            We're developers who find joy in programming and are passionate about contributing to the open-source
+            ecosystem.
           </p>
           <div className="flex flex-wrap outline outline-zinc-800">
             {getMembers().map((member) => (
@@ -103,8 +101,8 @@ export default function Home() {
               <TeamBadge className="mt-2" />
             </div>
             <p className="text-zinc-400 md:pr-10">
-              OffLegacy is a space for open-source collaboration. Share your story, contribute your ideas, and grow with
-              us.
+              OffLegacy Community is a space for open-source collaboration. Share your story, contribute your ideas and
+              grow with us.
             </p>
           </div>
           <div className="flex items-center gap-4 flex-wrap outline outline-zinc-800 px-8">
