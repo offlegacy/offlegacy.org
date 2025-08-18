@@ -40,11 +40,11 @@ const PROJECTS = [
   // },
   {
     id: 5,
-    name: 'React Actions',
-    description: 'React execution pipeline',
+    name: 'Machine',
+    description: 'Powerful state machine, transaction-based state management',
     status: PROJECT_STATUS.ALPHA,
     badgeColor: 'gray',
-    url: 'https://github.com/offlegacy/react-actions',
+    url: 'https://github.com/offlegacy/machine',
     disabled: true,
   },
   // {
