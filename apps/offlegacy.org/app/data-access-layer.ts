@@ -58,11 +58,11 @@ const PROJECTS = [
   // },
   {
     id: 7,
-    name: 'Overlay',
-    description: 'Powerful overlay state management',
+    name: 'Dialog',
+    description: 'Powerful dialog management',
     status: PROJECT_STATUS.ALPHA,
     badgeColor: 'gray',
-    url: 'https://github.com/offlegacy/overlay',
+    url: 'https://github.com/offlegacy/dialog',
     disabled: true,
   },
 ] as const
