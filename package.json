@@ -9,8 +9,8 @@
     "lint": "turbo lint"
   },
   "devDependencies": {
-    "prettier": "^3.5.3",
-    "turbo": "^2.5.0",
+    "prettier": "^3.7.4",
+    "turbo": "^2.6.3",
     "typescript": "^5.8.3"
   },
   "engines": {

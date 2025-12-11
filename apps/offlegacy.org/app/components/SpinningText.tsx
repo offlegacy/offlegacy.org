@@ -22,7 +22,7 @@ type SpinningTextProps = {
 const BASE_TRANSITION = {
   repeat: Number.POSITIVE_INFINITY,
   ease: 'linear',
-}
+} as const
 
 const BASE_ITEM_VARIANTS = {
   hidden: {

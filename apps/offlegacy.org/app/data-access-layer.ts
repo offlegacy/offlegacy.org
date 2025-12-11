@@ -38,15 +38,15 @@ const PROJECTS = [
   //   url: 'https://github.com/offlegacy/flags',
   //   disabled: true,
   // },
-  {
-    id: 5,
-    name: 'Machine',
-    description: 'Powerful state machine, transaction-based state management',
-    status: PROJECT_STATUS.ALPHA,
-    badgeColor: 'gray',
-    url: 'https://github.com/offlegacy/machine',
-    disabled: true,
-  },
+  // {
+  //   id: 5,
+  //   name: 'Machine',
+  //   description: 'Powerful state machine, transaction-based state management',
+  //   status: PROJECT_STATUS.ALPHA,
+  //   badgeColor: 'gray',
+  //   url: 'https://github.com/offlegacy/machine',
+  //   disabled: true,
+  // },
   // {
   //   id: 6,
   //   name: 'SandKit',
@@ -58,13 +58,14 @@ const PROJECTS = [
   // },
   {
     id: 7,
-    name: 'Dialog',
-    description: 'Powerful dialog management',
+    name: 'overlayplus',
+    description: 'Powerful dialog, toast',
     status: PROJECT_STATUS.ALPHA,
     badgeColor: 'gray',
-    url: 'https://github.com/offlegacy/dialog',
+    url: 'https://github.com/offlegacy/overlayplus',
     disabled: true,
   },
+  
 ] as const
 
 export function getProjects() {
