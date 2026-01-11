@@ -5,7 +5,7 @@ const PROJECTS = [
     id: 1,
     name: 'Event Tracker',
     description: 'Comprehensive solution for event tracking in React applications',
-    status: null,
+    status: PROJECT_STATUS.NEW,
     badgeColor: 'blue',
     url: 'https://event-tracker.offlegacy.org',
     disabled: false,
@@ -56,16 +56,15 @@ const PROJECTS = [
   //   url: 'https://github.com/offlegacy/sandkit',
   //   disabled: true,
   // },
-  {
-    id: 7,
-    name: 'overlayplus',
-    description: 'Powerful dialog, toast',
-    status: PROJECT_STATUS.ALPHA,
-    badgeColor: 'gray',
-    url: 'https://github.com/offlegacy/overlayplus',
-    disabled: true,
-  },
-  
+  // {
+  //   id: 7,
+  //   name: 'overlayplus',
+  //   description: 'Powerful dialog, toast',
+  //   status: PROJECT_STATUS.ALPHA,
+  //   badgeColor: 'gray',
+  //   url: 'https://github.com/offlegacy/overlayplus',
+  //   disabled: true,
+  // },
 ] as const
 
 export function getProjects() {
